@@ -1,6 +1,6 @@
 import "./GameOver.css";
 
-const GameOver = () => {
+const GameOver = ({ GameOver}) => {
   return <div>GameOver</div>;
   
 };
