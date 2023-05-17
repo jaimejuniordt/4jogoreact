@@ -24,13 +24,16 @@ function App() {
   const [gameStage, ] = useState(stages[0].name);
   const [words] = useState(wordsList);
 
-  console.log(words);
+  const startGame = () => {
+    // eslint-disable-next-line no-undef
+    setGameStage(stages[1].name)
+  }
 
   return (
     <div className="App">
-      {gameStage === "start" && <StartScreen />}
-      {gameStage === "game" && <Game />}
-      {gameStage === "end" && <GameOver />}
+      {gameStage === "start" && <StartScreen {startGame} />}
+     {gameStage === "game" && <Game />}
+     {gameStage === "end" && <GameOver />}
     </div>
   );
 }
